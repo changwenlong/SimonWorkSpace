@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>元群科技</title>
+
+	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+	<script src="scripts/jquery.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+
+	<!-- HTML5 Shim 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
+	<!--[if lt IE 9]>
+		 <script src="bootstrap/js/html5shiv.min.js"></script>
+		 <script src="bootstrap/js/respond.min.js"></script>
+	<![endif]--><link rel="Shortcut Icon" href="img/favicon.ico">
+
+
+
+</head>
+<body style="background-color:#111;">
+<div class="container">
+
+	<div class="row">
+		<div class="span">
+			<h3>
+			</h3>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="span">
+			<nav class="navbar navbar-inverse" role="navigation">
+			   <div class="navbar-header">
+				  <a class="navbar-brand" href="#"><img alt="" src="img/logo.jpg" /></a>
+				  <a class="navbar-brand" href="#"></a>
+				  <a class="navbar-brand" href="#"></a>
+				  <a class="navbar-brand" href="#"></a>
+			   </div>
+			   <div>
+				  <ul class="nav navbar-nav" id="chwlNavigator" style="padding:25px;">
+					 <li><a href="homepage.html">主页</a></li>
+					 <li><a href="businessRegion.html">业务范围</a></li>
+					 <li><a href="solution.html">解决方案</a></li>
+					 <li class="active"><a href="successfulCase.html">成功案例</a></li>
+					 <li>
+						<a href="aboutUs.html" class="dropdown-toggle" data-toggle="dropdown">
+						   关于我们 <b class="caret"></b>
+						</a>
+						<ul class="dropdown-menu">
+						   <li class="divider"></li>
+						   <li><a href="companyIntroduction.html">公司介绍</a></li>
+						   <li class="divider"></li>
+						   <li><a href="personnel.html">人员介绍</a></li>
+						</ul>
+					 </li>
+					 <li><a href="contactUs.html">联系我们</a></li>
+					 <li><a href="joinUs.html">加入我们</a></li>
+					 
+				  </ul>
+			   </div>
+			</nav>
+
+		</div>
+	</div>
+
+	<div class="row" style="background-image:url('img/company.png');height:440px;margin-bottom:15px;">
+		<div class="span">
+			<div style="width:58%;float:left">
+				<img src="img/company1.png" max-width:100%;> 
+			</div>
+			<div style="color:#0000ff;width:42%;height:440px;float:right;padding:50px 20px;background:none repeat scroll 0 0 #eeeeee;opacity: 0.7;filter:alpha(opacity=50)" >
+				
+				<h2>
+					敬请期待...
+				</h2>
+			</div>
+
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="span">
+			<h3>
+				
+			</h3>
+		</div>
+	</div>
+	<div class="row" id="bottomDiv">
+		<div class="span">
+			<div  align="center" style="background:#222;padding:12px;color:#999;">宁波高新区元群科技有限公司 copyright@2014-2024 &nbsp;&nbsp;
+			<a class="dropdown-toggle" data-toggle="dropdown" id="friendA" onclick="friendDiv()">
+						   友情链接 <b class="caret"></b>
+						</a>&nbsp;&nbsp;&nbsp;
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1253417345'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "v1.cnzz.com/z_stat.php%3Fid%3D1253417345%26show%3Dpic2' type='text/javascript'%3E%3C/script%3E"));</script>	
+			</div>
+			
+		</div>
+	</div>
+		
+	
+	<div id="friendLink" style="position:absolute;z-index:100;display:none;background-color:#aaaaaa;">
+		<table border="0" cellspacing="1">
+		   <tr><td style="border: solid 1px #555555; height: 20px;padding:5px 20px;"><a href="http://www.cst.zju.edu.cn/ ">浙大软件学院</a></td></tr>
+		   
+		</table>
+	</div>
+	<script type="text/javascript">
+		function friendDiv(){
+			var div=$("#friendLink");
+			var temp=div.is(":hidden");
+			if(temp){
+				div.show();
+			}else{
+				div.hide();
+			}
+			div.css("left",$("#friendA").offset().left + "px"); 
+			div.css("top",$("#bottomDiv").offset().top-div.height() + "px");
+		}
+	</script>
+</div>
+	
+
+</body>
+</html>	
