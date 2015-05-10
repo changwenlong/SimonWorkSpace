@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace是mapper接口的全限定名-->
+<mapper namespace="edu.zju.chwl.mapper.GroupMapper">
+
+<!-- 意图想通过获得组和组中的所有student,此处相当于one2many -->
+<resultMap type="edu.zju.chwl.po.Group" id="getGroupAndMembers">
+	<result column="groupName" property="groupName" />
+	<result column="startDate" property="startDate" />
+	<result column="endDate" property="endDate" />
+	<result column="comment" property="comment" />
+	<collection property="members" ofType="edu.zju.chwl.po.Member" column="groupId"><!-- 
+			注意此处的groupId是t_member表的外键 -->
+		<result column="groupId" property="groupId" />
+		<result column="name" property="name" />
+		<result column="freeTimeStr" property="freeTimeStr" />
+	</collection>
+</resultMap>  
+
+<!-- 根据主键id查询小组信息 -->
+<select id="findGroupById" parameterType="int"
+resultMap="getGroupAndMembers">
+   SELECT groupName,startDate,
+   endDate,comment,groupId,name,freeTimeStr
+    FROM t_group g inner join t_member m on g.id=m.groupId WHERE g.id = #{id}
+</select>
+
+<!-- 新增小组 -->
+<insert id="addGroup" useGeneratedKeys="true" keyProperty="id" parameterType="edu.zju.chwl.po.Group">
+  insert into t_group (groupName,startDate,endDate,comment) 
+  values(#{groupName},#{startDate},#{endDate},#{comment})
+</insert>
+
+
+</mapper>
