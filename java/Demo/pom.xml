@@ -3,11 +3,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>edu.zju.chwl</groupId>
-	<artifactId>hw4</artifactId>
+	<artifactId>Demo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>hw4</name>
+	<name>Demo</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>

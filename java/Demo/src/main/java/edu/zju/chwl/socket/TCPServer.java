@@ -3,7 +3,7 @@ package edu.zju.chwl.socket;
 import java.io.*;
 import java.net.*;
 import java.util.Scanner;
-public class Server {
+public class TCPServer {
 	public static void main(String[] args) {
 		BufferedReader br = null;
 		PrintWriter pw = null;
