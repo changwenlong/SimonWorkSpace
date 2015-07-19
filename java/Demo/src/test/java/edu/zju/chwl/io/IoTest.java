@@ -8,7 +8,7 @@ import org.junit.Test;
 public class IoTest {
 	@Test
 	public void test() throws IOException {
-		BufferedReader br=new BufferedReader(new FileReader("2.txt"));
+		/*BufferedReader br=new BufferedReader(new FileReader("2.txt"));
 		String str;
 		Map<String,Integer> wordCount=new HashMap<String,Integer>();
 		while((str=br.readLine())!=null){
@@ -21,6 +21,6 @@ public class IoTest {
 				}
 			}
 		}
-		System.out.println(wordCount);
+		System.out.println(wordCount);*/
 	}
 }
