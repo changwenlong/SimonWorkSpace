@@ -9,7 +9,7 @@ public class TCPClient {
 		BufferedReader br = null;
 		PrintWriter pw = null;
 		try{
-			Socket socket=new Socket("localhost",2000);
+			Socket socket=new Socket("211.149.245.172",80);
 			System.out.println("连接服务器成功");
 			//获取输入流
 			br=new BufferedReader(new InputStreamReader(socket.getInputStream()));

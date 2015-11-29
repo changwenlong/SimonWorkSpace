@@ -5,7 +5,7 @@ import java.net.*;
 
 public class HttpRequest {
 	public static void main(String[] args) throws IOException{
-		String urlStr="http://localhost:8080";
+		String urlStr="http://toupiao.v0580.com/e/enews/index.php";
 		URL url=new URL(urlStr);
 		BufferedReader br=new BufferedReader(new InputStreamReader(url.openStream()));
 		String text=null;
