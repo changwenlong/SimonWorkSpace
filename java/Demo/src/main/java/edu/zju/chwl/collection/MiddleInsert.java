@@ -10,7 +10,7 @@ public class MiddleInsert {
 		
 
 		a=System.currentTimeMillis();
-		for(int i=0,j=0;i<20000;i+=2,j++){
+		for(int i=0;i<20000;i+=2){
 			linkedList.add(0,i);
 			linkedList.add(0,i+1);
 		}
@@ -19,7 +19,7 @@ public class MiddleInsert {
 		System.out.println("LinkedList times:"+b+"ms");
 		
 		a=System.currentTimeMillis();
-		for(int i=0,j=0;i<20000;i+=2,j++){
+		for(int i=0;i<20000;i+=2){
 			arrayList.add(0,i);
 			arrayList.add(0,i+1);
 		}

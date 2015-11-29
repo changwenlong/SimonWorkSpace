@@ -5,7 +5,6 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import org.junit.Test;
 
 public class TestingThreadFactory implements ThreadFactory {
 

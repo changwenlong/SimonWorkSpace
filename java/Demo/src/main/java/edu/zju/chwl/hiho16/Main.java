@@ -26,6 +26,7 @@ public class Main {
 	 * p=(a+b+c)/2 s=p(p-a)(p-b)(p-c)
 	 */
 	public static void question1() {
+		@SuppressWarnings("resource")
 		Scanner in = new Scanner(System.in);
 		while (in.hasNext()) {
 			int t = in.nextInt();

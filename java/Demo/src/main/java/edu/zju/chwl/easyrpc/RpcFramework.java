@@ -25,6 +25,7 @@ public class RpcFramework {
 	 * @throws IOException
 	 */
 	public static void export(final Object service, int port) throws IOException {
+		@SuppressWarnings("resource")
 		ServerSocket ss = new ServerSocket(port);
 		ExecutorService executor = Executors.newFixedThreadPool(100);
 		while (true) {

@@ -2,8 +2,7 @@ package edu.zju.chwl.extend;
 
 public class ExtendDemo{
 	public static void main(String[] args){
-		Fu fu=new Zi();
-		fu.func();
+		Fu.func();
 	}
 }
 

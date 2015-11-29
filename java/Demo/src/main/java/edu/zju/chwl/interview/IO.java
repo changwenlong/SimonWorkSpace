@@ -21,6 +21,7 @@ public class IO {
 	}
 	
 	public ResultType findLongestWord(String path) throws IOException{
+		@SuppressWarnings("resource")
 		BufferedReader reader=new BufferedReader(new FileReader(path));
 		StringBuilder sb=new StringBuilder();
 		String str;
