@@ -5,6 +5,7 @@ import java.util.Date;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import cn.itcast.common.junit.SpringJunitTest;
 import cn.itcast.core.bean.TestTb;
 
 public class TestTbServiceImplTest extends SpringJunitTest{

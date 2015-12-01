@@ -1,4 +1,4 @@
-package cn.itcast.core.service;
+package cn.itcast.common.junit;
 
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
