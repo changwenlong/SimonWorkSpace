@@ -1,0 +1,32 @@
+package cn.itcast.core.bean;
+
+import java.util.Date;
+
+/**
+ * 测试table
+ * @author chwl
+ * @Date 2015年12月1日 下午8:33:58
+ */
+public class TestTb {
+	private Integer id;
+	private String name;
+	private Date birthday;
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public Date getBirthday() {
+		return birthday;
+	}
+	public void setBirthday(Date birthday) {
+		this.birthday = birthday;
+	}
+}
