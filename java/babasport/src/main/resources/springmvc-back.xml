@@ -21,4 +21,17 @@
 		<property name="suffix" value=".jsp"/>
 	</bean>
 	
+	<!-- 配置日期转换器 全局的 -->
+	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+		<property name="webBindingInitializer">
+			<bean class="cn.itcast.common.web.springmvc.BindingInitializer"></bean>
+		</property>
+	</bean>
+	
+	<!-- 上传图片 -->
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<!-- 最大上传尺寸   B    1M -->
+		<property name="maxUploadSize"  value="1048576"/>
+	</bean>
+	
 </beans>

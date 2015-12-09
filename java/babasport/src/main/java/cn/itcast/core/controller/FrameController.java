@@ -7,12 +7,27 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 
 @Controller
-@RequestMapping(value="/control")
-public class CenterController {
+@RequestMapping(value="/frame")
+public class FrameController {
 
-	@RequestMapping(value="/index.do")
-	public String index(){
-		return "index";
+	@RequestMapping(value="/productMain.do")
+	public String productMain(){
+		return "frame/product_main";
+	}
+	
+	@RequestMapping(value="/productLeft.do")
+	public String productLeft(){
+		return "frame/product_left";
+	}
+	
+	@RequestMapping(value="/orderMain.do")
+	public String orderMain(){
+		return "frame/order_main";
+	}
+	
+	@RequestMapping(value="/orderLeft.do")
+	public String orderLeft(){
+		return "frame/order_left";
 	}
 	
 	@RequestMapping(value="/top.do")

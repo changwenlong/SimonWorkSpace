@@ -4,24 +4,49 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>babasport-edit</title>
+
+<script type="text/javascript">
+
+//上传图片
+function uploadPic(){
+	//定义参数
+ 	var options = {
+			url : "/upload/uploadPic.do",
+			dataType : "json",
+			type : "post",
+			success : function(data){
+				//回调 二个路径  
+				//url
+				//path
+				$("#allImgUrl").attr("src",data.url);
+				$("#path").val(data.path);
+			}		
+	};
+	//jquery.form使用方式
+	$("#jvForm").ajaxSubmit(options);
+}
+
+</script>
+
 </head>
 <body>
 <div class="box-positon">
-	<div class="rpos">当前位置: 品牌管理 - 添加</div>
+	<div class="rpos">当前位置: 品牌管理 - 修改</div>
 	<form class="ropt">
-		<input type="submit" onclick="this.form.action='v_list.shtml';" value="返回列表" class="return-button"/>
+		<input type="submit" onclick="this.form.action='list.do';" value="返回列表" class="return-button"/>
 	</form>
 	<div class="clear"></div>
 </div>
 <div class="body-box" style="float:right">
-	<form id="jvForm" action="o_save.shtml" method="post">
+	<form id="jvForm" action="edit.do" method="post">
+		<input type="hidden" value="${brand.id }" name="id"/>
 		<table cellspacing="1" cellpadding="2" width="100%" border="0" class="pn-ftable">
 			<tbody>
 				<tr>
 					<td width="20%" class="pn-flabel pn-flabel-h">
 						<span class="pn-frequired">*</span>
 						品牌名称:</td><td width="80%" class="pn-fcontent">
-						<input type="text" class="required" name="name" maxlength="100"/>
+						<input type="text" class="required" name="name" maxlength="100" value="${brand.name }"/>
 					</td>
 				</tr>
 				<tr>
@@ -35,27 +60,28 @@
 				<tr>
 					<td width="20%" class="pn-flabel pn-flabel-h"></td>
 						<td width="80%" class="pn-fcontent">
-						<img width="100" height="100" id="imgSize1ImgSrc"/>
-						<input type="file" />
+						<img width="100" height="100" id="allImgUrl" name="allUrl" src="${brand.allUrl }"/>
+						<input type="hidden" name="imgUrl" value="${brand.imgUrl }" id="path"></input>
+						<input type="file" name="pic" onchange="uploadPic()"/>
 					</td>
 				</tr>
 				<tr>
 					<td width="20%" class="pn-flabel pn-flabel-h">
 						品牌描述:</td><td width="80%" class="pn-fcontent">
-						<input type="text" class="required" name="name" maxlength="80"  size="60"/>
+						<input type="text" class="required" name="description" value="${brand.description }" maxlength="80"  size="60"/>
 					</td>
 				</tr>
 				<tr>
 					<td width="20%" class="pn-flabel pn-flabel-h">
 						排序:</td><td width="80%" class="pn-fcontent">
-						<input type="text" class="required" name="name" maxlength="80"/>
+						<input type="text" class="required" name="sort" value="${brand.sort }" maxlength="80"/>
 					</td>
 				</tr>
 				<tr>
 					<td width="20%" class="pn-flabel pn-flabel-h">
 						是否可用:</td><td width="80%" class="pn-fcontent">
-						<input type="radio" name="isDisplay" value="1" checked="checked"/>可用
-						<input type="radio" name="isDisplay" value="0"/>不可用
+						<input type="radio" name="isDisplay" value="1" <c:if test="${brand.isDisplay ==1 }">checked="checked"</c:if> />可用
+						<input type="radio" name="isDisplay" value="0" <c:if test="${brand.isDisplay ==0 }">checked="checked"</c:if>/>不可用
 					</td>
 				</tr>
 			</tbody>

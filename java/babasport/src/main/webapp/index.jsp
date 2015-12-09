@@ -9,7 +9,7 @@
 <form action="test/springmvc.do" method="post">
 <table>
 	<tr><td>姓名：<input type="text"  name="name"></td></tr>
-	<!-- <tr><td>生日：<input type="text" value="2015-01-09 09:03:09" name="birthday"></td></tr> -->
+	<tr><td>生日：<input type="text" value="2015-01-09 09:03:09" name="birthday"></td></tr>
 	<tr><td><input type="submit" value="提交"></td></tr>
 </table>			
 </form>
