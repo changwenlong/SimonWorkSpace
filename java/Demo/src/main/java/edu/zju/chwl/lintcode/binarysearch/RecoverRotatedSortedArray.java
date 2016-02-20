@@ -1,4 +1,4 @@
-package edu.zju.chwl.leetcode.binarysearch;
+package edu.zju.chwl.lintcode.binarysearch;
 
 import java.util.ArrayList;
 

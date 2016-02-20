@@ -1,4 +1,4 @@
-package edu.zju.chwl.leetcode;
+package edu.zju.chwl.lintcode;
 
 public class APlusB {
 

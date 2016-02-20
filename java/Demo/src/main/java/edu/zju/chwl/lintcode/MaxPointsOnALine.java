@@ -1,4 +1,4 @@
-package edu.zju.chwl.leetcode;
+package edu.zju.chwl.lintcode;
 
 import java.util.ArrayList;
 import java.util.HashMap;
