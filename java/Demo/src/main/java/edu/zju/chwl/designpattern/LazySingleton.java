@@ -1,6 +1,5 @@
 package edu.zju.chwl.designpattern;
 
-import java.util.concurrent.TimeUnit;
 
 public class LazySingleton implements Runnable {
 	private LazySingleton() {

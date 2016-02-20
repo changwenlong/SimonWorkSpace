@@ -8,6 +8,7 @@ import edu.zju.chwl.util.Tools;
 public class TinyLink {
 
 	public static void main(String[] args) {
+		@SuppressWarnings("resource")
 		Scanner reader = new Scanner(System.in);
 		HashMap<String,String> matchMap=new HashMap<String,String>();
 		while(reader.hasNext()){

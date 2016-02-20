@@ -34,6 +34,7 @@ class ReadFile implements Runnable{
 	@Override
 	public void run() {
 		try {
+			@SuppressWarnings("resource")
 			BufferedReader in = new BufferedReader( new FileReader(new File("c://temp/10.in")));
 			try {
 				latch.await();
@@ -58,8 +59,9 @@ class WriteFile implements Runnable{
 	
 	@Override
 	public void run() {
+		BufferedWriter out =null;
 		try {
-			BufferedWriter out = new BufferedWriter( new FileWriter(new File("c://temp/10.in")));
+			out = new BufferedWriter( new FileWriter(new File("c://temp/10.in")));
 			try {
 				latch.await();
 				System.out.println(Thread.currentThread().getName());
@@ -72,6 +74,12 @@ class WriteFile implements Runnable{
 			}
 		}  catch (IOException e) {
 			e.printStackTrace();
+		} finally{
+			try {
+				out.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
 		}
 		
 	}

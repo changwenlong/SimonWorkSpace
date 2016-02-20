@@ -27,7 +27,8 @@ public class Permutations {
     	for(ArrayList<Integer> item:permute(nums)){
     		for(int i=0;i<=item.size();i++){
     			if(i==0||first!=item.get(i-1)){
-        			ArrayList<Integer> tempItem=(ArrayList<Integer>) item.clone();
+        			@SuppressWarnings("unchecked")
+					ArrayList<Integer> tempItem=(ArrayList<Integer>) item.clone();
         			tempItem.add(i,first);
         			resultList.add(tempItem);
     			}

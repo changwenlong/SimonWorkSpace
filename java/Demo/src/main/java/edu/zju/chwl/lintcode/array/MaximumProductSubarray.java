@@ -1,7 +1,6 @@
 package edu.zju.chwl.lintcode.array;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 import edu.zju.chwl.util.Tools;
 

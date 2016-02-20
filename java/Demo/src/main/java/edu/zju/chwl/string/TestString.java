@@ -13,10 +13,10 @@ public class TestString {
 		String c=new String("abc");
 		String d=c.intern();
 		String e="ab"+"c";
-		Tools.println(a==b);
-		Tools.println(a==c);
-		Tools.println(a==d);
-		Tools.println(a==e);
+		System.out.println(a==b);
+		System.out.println(a==c);
+		System.out.println(a==d);
+		System.out.println(a==e);
 		testInteger();
 	}
 	
@@ -25,9 +25,9 @@ public class TestString {
 		Integer b=127;
 		Integer c=new Integer(127);
 		Integer d=Integer.valueOf(c);
-		Tools.println(a==b);
-		Tools.println(a==c);
-		Tools.println(a==d);
+		System.out.println(a==b);
+		System.out.println(a==c);
+		System.out.println(a==d);
 	}
 
 }

@@ -9,6 +9,7 @@ import java.util.TreeSet;
 public class Main {
 
 	public static void main(String[] args) {
+		@SuppressWarnings("resource")
 		Scanner in = new Scanner(System.in);
 		List<String> destList=new ArrayList<String>();
 		List<String> searchList=new ArrayList<String>();

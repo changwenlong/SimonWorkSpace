@@ -8,8 +8,6 @@ package edu.zju.chwl.effectivejava.enumandannotation;
  */
 public class ej36 {
 	
-	private char first;
-	private char second;
 	
 	
 	

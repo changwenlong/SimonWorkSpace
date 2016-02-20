@@ -1,15 +1,10 @@
 package edu.zju.chwl.lintcode;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 import java.util.TreeMap;
-import java.util.TreeSet;
 
 public class MinWindows {
 
@@ -138,7 +133,6 @@ class Solution {
         		locationMap.put(item, t.charAt(i));
         	}
         }
-        Set<Integer> locationSet=new TreeSet<Integer>();
         
         int min = 0,max = 0,len=Integer.MAX_VALUE,a,b;
         Map<Character,Integer> resultMap= new HashMap<Character,Integer>();

@@ -19,13 +19,13 @@ public class MaximumSubarrayII {
 			int value = in.nextInt();
 			arrayList.add(value);
 		}
-		Tools.println(new MaximumSubarrayII().maxTwoSubArrays(arrayList));
+		System.out.println(new MaximumSubarrayII().maxTwoSubArrays(arrayList));
 	}
 
 	public int maxTwoSubArrays(ArrayList<Integer> nums) {
 		int size=nums.size();
 		ListMaxSum listMaxSum = getMaxSum(nums);
-		Tools.println(listMaxSum);
+		System.out.println(listMaxSum);
 		int start = listMaxSum.start;
 		int end = listMaxSum.end;
 		int maxSum = listMaxSum.maxSum;
@@ -46,8 +46,8 @@ public class MaximumSubarrayII {
 			midMin=midMin<0?-midMin:0;
 		}
 
-		Tools.println(frontMax);
-		Tools.println(backMax);
+		System.out.println(frontMax);
+		System.out.println(backMax);
 		
 		return maxSum+getMax(frontMax,backMax,midMin);
 	}
