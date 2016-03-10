@@ -4,14 +4,11 @@ import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.net.ServerSocket;
 import java.nio.ByteBuffer;
-import java.nio.CharBuffer;
 import java.nio.channels.SelectionKey;
 import java.nio.channels.Selector;
 import java.nio.channels.ServerSocketChannel;
 import java.nio.channels.SocketChannel;
-import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.List;
 import java.util.Set;
 
 public class EchoService {
@@ -68,7 +65,7 @@ public class EchoService {
 							System.out.print((char) output.get()); 
 						}
 					} else if (key.isWritable()) {
-						/*SocketChannel client = (SocketChannel) key.channel();
+						SocketChannel client = (SocketChannel) key.channel();
 						System.out.println("Write from " + client);
 						ByteBuffer output = (ByteBuffer) key.attachment();
 						output.flip();
@@ -76,25 +73,7 @@ public class EchoService {
 							output.putChar(Character.toUpperCase((char) output.get()));
 						}
 						client.write(output);
-						output.compact();*/
-						
-						ByteBuffer output = (ByteBuffer) key.attachment();
-						output.flip();
-						List<Character> charList=new ArrayList<Character>();
-						while (output.hasRemaining()) {
-							charList.add(Character.toUpperCase((char) output.get()));
-						}
-						System.out.println(charList);
-						SocketChannel client = (SocketChannel) key.channel();
-						System.out.println("Write from " + client);
-						ByteBuffer buffer = ByteBuffer.allocate(6);
-						CharBuffer charBuffer = buffer.asCharBuffer();
-						char[] inputs="ccc".toCharArray();
-						charBuffer.put(inputs, 0, inputs.length);
-						/*for(char ch:charList){
-							charBuffer.put(ch);
-						}*/			
-						client.write(buffer);
+						output.compact();					
 						
 					}
 				} catch (IOException ex) {
