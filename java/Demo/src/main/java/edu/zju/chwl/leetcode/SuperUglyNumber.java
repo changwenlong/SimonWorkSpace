@@ -1,6 +1,9 @@
 package edu.zju.chwl.leetcode;
 
+import java.math.BigInteger;
 import java.util.Arrays;
+
+import org.junit.*;
 
 /**
  * https://leetcode.com/problems/super-ugly-number/
@@ -9,16 +12,11 @@ import java.util.Arrays;
  * @Date 2016年3月6日 下午3:01:42
  */
 public class SuperUglyNumber {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
 	
-    public int nthSuperUglyNumber(int n, int[] primes) {
-        if(n==1) return 1;
-        int[] dp =new int[n+1];
-        dp[1]=1;
+    public BigInteger nthSuperUglyNumber(int n, int[] primes) {
+        if(n==1) return BigInteger.ONE;
+        BigInteger[] dp =new BigInteger[n+1];
+        dp[1]=BigInteger.ONE;
         int len=primes.length;
         int[] ps= new int[len];
         Arrays.fill(ps, 1);
@@ -28,20 +26,40 @@ public class SuperUglyNumber {
         return dp[n];
     }
 
-	private int getMin(int[] primes, int[] ps,int[] dp) {
-		int min = Integer.MAX_VALUE;
-		for(int i=0;i<primes.length;i++){
-			if(primes[i]*dp[ps[i]]<min){
-				min=primes[i]*dp[ps[i]];
+	private BigInteger getMin(int[] primes, int[] ps,BigInteger[] dp) {
+		BigInteger min = dp[ps[0]].multiply(BigInteger.valueOf(primes[0]));
+		for(int i=1;i<primes.length;i++){
+			BigInteger res = dp[ps[i]].multiply(BigInteger.valueOf(primes[i]));
+			if(res.compareTo(min)<0){
+				min=res;
 			}
 		}
 		//所有最小值位置都必须加1
 		for(int i=0;i<primes.length;i++){
-			if(primes[i]*dp[ps[i]]==min){
+			BigInteger res = dp[ps[i]].multiply(BigInteger.valueOf(primes[i]));
+			if(res.compareTo(min)==0){
 				ps[i]++;
 			}
 		}
 		return min;
+	}
+	
+	@Test
+	public void test(){
+		for(int i=1;i<2335;i++){
+			System.out.println(i+":"+nthSuperUglyNumber(i+1,new int[]{2,3}));;
+		}
+	}
+	
+	@Test
+	public void test1(){
+		int count=1;
+		for(int i=2;i<4000;i++){
+			if(i%2==0||i%3==0){
+				System.out.println(count+":"+i);
+				count++;
+			}
+		}
 	}
 
 }

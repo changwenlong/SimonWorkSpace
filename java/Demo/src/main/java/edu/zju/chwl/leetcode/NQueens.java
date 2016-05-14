@@ -3,7 +3,7 @@ package edu.zju.chwl.leetcode;
 import java.util.*;
 
 /**
- * https://leetcode.com/problems/n-queens-ii/
+ * https://leetcode.com/problems/n-queens/
  * 
  * @author a590450
  * @date 10 Mar 2016 15:23:12
@@ -11,7 +11,7 @@ import java.util.*;
 public class NQueens {
 
 	public static void main(String[] args) {
-		System.out.println(solveNQueens(4));
+		System.out.println(new NQueens().solveNQueens(4));
 	}
 
 	
@@ -26,7 +26,7 @@ public class NQueens {
 	 * @return
 	 */
 
-	public static List<List<String>> solveNQueens(int n) {
+	public List<List<String>> solveNQueens(int n) {
 		if (n == 0) {
 			return Collections.emptyList();
 		}
@@ -38,7 +38,7 @@ public class NQueens {
 		return results;
 	}
 
-	private static void bitDFS(int x, int y, int diag, int antiDiag, int n,ArrayList<List<String>> results, ArrayList<Integer> list,String str) {
+	private void bitDFS(int x, int y, int diag, int antiDiag, int n,ArrayList<List<String>> results, ArrayList<Integer> list,String str) {
 		if(x==n){
 			results.add(getStringList(list, n, str));
 			return;
@@ -55,7 +55,7 @@ public class NQueens {
 		}		
 	}
 	
-	private static List<String> getStringList(ArrayList<Integer> list, int n, String str) {
+	private List<String> getStringList(ArrayList<Integer> list, int n, String str) {
 		ArrayList<String> strList = new ArrayList<String>();
 		for (Integer i : list) {
 			strList.add(str.substring(0, i) + 'Q' + str.substring(i+1));

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="edu.zju.chwl.mybatis.mapper.StudentMapper">
+	<insert id="add" parameterType="Student">
+		insert into SORP_OWNER.student (id, name,age) values(#{id}, #{name}, #{age})
+	</insert>
+	
+	<select id="selectAll" resultType="Student">
+		select id,name,age from SORP_OWNER.student
+	</select>
+	
+	<insert id="addStudent" parameterType="Student">
+		 {call sorp_owner.addStudent(#{id, jdbcType = INTEGER, mode = IN},
+		 	#{name, jdbcType = VARCHAR, mode = IN},
+		 	#{age, jdbcType = INTEGER, mode = IN})}
+	</insert>
+	
+	<insert id="addBatch" parameterType="Student">
+		insert into SORP_OWNER.student (id, name,age) 
+		<foreach collection="list" item="stu" separator="union all" index="index"> 
+		 (select #{stu.id ,jdbcType = INTEGER}, #{stu.name, jdbcType = VARCHAR}, #{stu.age ,jdbcType = INTEGER} from dual)
+    	</foreach>				
+	</insert>
+	
+</mapper> 

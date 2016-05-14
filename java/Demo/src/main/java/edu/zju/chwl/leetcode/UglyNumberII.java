@@ -1,8 +1,5 @@
 package edu.zju.chwl.leetcode;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 /**
  * https://leetcode.com/problems/ugly-number-ii/

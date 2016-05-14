@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<package name="edu.zju.chwl.mybatis.bean" />
+	</typeAliases>
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver" value="oracle.jdbc.driver.OracleDriver" />
+				<property name="url"
+					value="jdbc:oracle:thin:@duai01.statestr.com:1521:O01UAI0" />
+				<property name="username" value="SORP_OWNER" />
+				<property name="password" value="SORP_OWNER" />
+			</dataSource>
+		</environment>
+	</environments>
+	<mappers>
+		<package name="edu.zju.chwl.mybatis.mapper"/>
+	</mappers>
+</configuration>

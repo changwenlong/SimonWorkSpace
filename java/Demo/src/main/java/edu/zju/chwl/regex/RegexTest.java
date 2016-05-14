@@ -40,5 +40,11 @@ public class RegexTest {
 			System.out.println(matcher.group());
 		}		
 	}
+	
+	@Test
+	public void markdownMatch(){
+		String line ="### aaa\n# bbb\n## ccc\nddd\n#eee\n##fff\n###ggg";
+		System.out.println(line.replaceAll("^#+[\\S&&[^#]]", "***"));
+	}
 
 }
