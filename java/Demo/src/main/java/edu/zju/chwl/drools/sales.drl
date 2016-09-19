@@ -1,0 +1,21 @@
+package edu.zju.chwl.drools
+
+import edu.zju.chwl.drools.Sale;
+
+declare Sale
+	@role(event)
+end
+
+rule "SaleOne"
+
+	when
+		Number($totalSalesAmount:intValue , intValue>1000)
+		from accumulate 
+		( 
+			Sale($amount:amount,$quantity:quantity) 
+			sum($amount*$quantity)
+		)
+	then
+		System.out.println("SaleOne:"+$totalSalesAmount);
+
+end

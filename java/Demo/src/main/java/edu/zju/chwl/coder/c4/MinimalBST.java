@@ -20,28 +20,6 @@ public class MinimalBST {
 	}
 	
 	
-	public  boolean checkBST(TreeNode root){
-		preOrder(root);
-		return flag;
-	}
-	
-	boolean flag=true;
-	int val=Integer.MIN_VALUE;
-	private void preOrder(TreeNode root){
-		if(root==null){
-			return;
-		}
-		preOrder(root.left);
-		if(root.val<val){
-			flag =false;
-			return;
-		}else{
-			val=root.val;
-		}
-		preOrder(root.right);
-		
-	}
-	
 	@Test
 	public void test(){
 		buildMinimalBST(new int[]{1,2,3,4,5,6,7,8,9});

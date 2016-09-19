@@ -13,5 +13,23 @@ public class ArrayDemo {
 		System.out.println(copyArr.length);
 		
 	}
+	
+	@Test
+	public void test1() {
+		getStr();
+	}
 
+	public String getStr(){
+		try{
+			return func();
+		}finally{
+			System.out.println("finally");
+		}
+	}
+
+	private String func() {
+		String a = "func";
+		System.out.println(a);
+		return a;
+	}
 }

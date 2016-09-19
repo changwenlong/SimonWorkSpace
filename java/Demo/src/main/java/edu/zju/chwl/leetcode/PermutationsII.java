@@ -36,9 +36,8 @@ public class PermutationsII {
 		}
 		for(int i=0;i<loc.length;i++){
 			if(loc[i]){
-				int count = list.size();
 				//重复出现的元素的位置不能在前一元素前
-				if(count!=0&&i<list.get(count-1)&&nums[count]==nums[count-1]){
+				if(i!=0&&!loc[i-1]&&nums[i]==nums[i-1]){
 					continue;
 				}
 				list.add(i);

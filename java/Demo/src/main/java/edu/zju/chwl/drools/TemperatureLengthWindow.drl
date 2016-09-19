@@ -1,0 +1,22 @@
+package edu.zju.chwl.drools
+
+import edu.zju.chwl.drools.Temperature;
+
+declare Temperature
+	@role(event)
+end
+
+rule "Temperature Lenght Window"
+
+	when
+		Number($avgTemp:doubleValue , doubleValue>50)
+		from accumulate 
+		( 
+			Temperature($temp:temp) over window:length(3); 
+			average($temp)
+		)
+	then
+		System.out.println($avgTemp);
+
+end
+

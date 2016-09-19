@@ -1,0 +1,60 @@
+package edu.zju.chwl.drools
+
+import edu.zju.chwl.drools.Cpu;
+import edu.zju.chwl.drools.Mem;
+
+declare Cpu
+	@role(event)
+end
+
+declare Mem
+	@role(event)
+end
+
+rule "Cpu Monitor"
+
+	when
+		Number($avgValue:doubleValue , doubleValue>90)
+		from accumulate 
+		( 
+			Cpu($usagePercent:usagePercent) over window:time(3s)
+			average($usagePercent)
+		)
+	then
+		System.out.println("cpu: "+$avgValue);
+
+end
+
+rule "Mem Monitor"
+
+	when
+		Number($avgValue:doubleValue , doubleValue>90)
+		from accumulate 
+		( 
+			Mem($usagePercent:usagePercent) over window:time(3s)
+			average($usagePercent)
+		)
+	then
+		System.out.println("mem: "+$avgValue);
+
+end
+
+rule "Mem After Cpu"
+
+	when
+		$cpu : Cpu(usagePercent>96) 
+		$mem : Mem(usagePercent>95, this after[0,1s] $cpu)
+	then
+		System.out.println("Mem After Cpu : "+$cpu+" "+$mem);
+
+end
+
+rule "Mem After Cpu 111"
+
+	when
+		$cpu : Cpu(usagePercent>96)
+		not Mem(usagePercent>95)
+	then
+		System.out.println("Mem After Cpu 111: "+$cpu);
+
+end

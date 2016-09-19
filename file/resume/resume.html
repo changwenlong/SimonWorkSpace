@@ -25,12 +25,12 @@ body {
 </style>
 
 </head>
-<body>
+<body style="">
 	<div class="container" >
 		<div class="row">
 			<div class="col-sm-12">
 				<img src="img/xiaohui.jpg" width="120px" style="float:left;">
-				<h3 style="float:right;padding:20px;">简历</h3>
+				<h3 style="float:right;padding:20px;">Java研发</h3>
 				<h2 style="padding:40px 0px">常文龙</h2>
 			</div>
 		</div>
@@ -39,8 +39,26 @@ body {
 			<tr><td>性别：男</td>
 				<td>出生年月：199109</td>
 			</tr>
-			<tr><td>手机号：15271807520</td>
-				<td>邮箱： 21451136@zju.edu.cn  </td>
+			<tr><td>手机：15271807520</td>
+				<td>邮箱： 786320366@qq.com  </td>
+			</tr>
+		</table>
+		
+		<ul class="nav nav-tabs" role="tablist">
+			<li role="presentation" class="active"><a href="#home"
+				role="tab" data-toggle="tab">教育背景</a></li>
+		</ul>
+		<table style="margin: 10px; cellspacing:100px"  border="0" height="60" width="600" cellspacing="50">
+			<tr>
+				<td >浙江大学</td>
+				<td>软件工程</td>
+				<td>工程硕士</td>
+				<td>2014.09 - 至今</td>
+			</tr>
+			<tr><td>湖北大学</td>
+				<td>软件工程</td>
+				<td>本科</td>
+				<td>2009.09 - 2013.07</td>
 			</tr>
 		</table>
 		
@@ -48,52 +66,7 @@ body {
 		<ul class="nav nav-tabs" role="tablist">
 			
 			<li role="presentation" class="active"><a href="#home"
-				role="tab" data-toggle="tab">技术技能</a></li>
-			<li role="presentation" ><a href="#home"
 				role="tab" data-toggle="tab">项目经验</a></li>
-			<li role="presentation" ><a href="#home"
-				role="tab" data-toggle="tab">阅读书籍</a></li>
-			<li role="presentation" ><a href="#home"
-				role="tab" data-toggle="tab">自我评价</a></li>
-			<li role="presentation" ><a href="#home"
-				role="tab" data-toggle="tab">教育背景</a></li>
-		</ul>
-		
-		<!-- Tab panes -->
-		<div class="tab-content">
-			<div role="tabpanel" class="tab-pane active" id="home">
-				<div class="row">
-					<div class="col-sm-12">
-						<!-- <img src="img/yin.png" class="img-circle img-thumbnail" style="float:right;"> -->
-						<ul style="text-align:left;">
-							<li>英语：CET-6</li>
-							<li>编程语言：熟悉java开发，了解jvm，网络编程，多线程</li>
-							<li>Java框架：自学SSH框架以及MyBatis，相对来说Spring更熟悉一些</li>
-							<li>设计模式：熟悉常见的几种设计模式（单例模式、适配器模式、工厂模式、装饰者模式等）</li>
-							<li>工具使用：熟悉SVN、Maven、Git、Eclipse、tomcat等工具的使用</li>
-							<li>数据库：熟悉常用的SQL语句，平时使用MySQL；对于非关系型数据库，了解MongoDB</li>
-							<li>算法：熟练数据结构中的一些常用算法</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-
-
-		
-		<!-- Nav tabs -->
-		<ul class="nav nav-tabs" role="tablist">
-			
-			<li role="presentation" ><a href="#home"
-				role="tab" data-toggle="tab">技术技能</a></li>
-			<li role="presentation" class="active"><a href="#home"
-				role="tab" data-toggle="tab">项目经验</a></li>
-			<li role="presentation" ><a href="#home"
-				role="tab" data-toggle="tab">阅读书籍</a></li>
-			<li role="presentation" ><a href="#home"
-				role="tab" data-toggle="tab">自我评价</a></li>
-			<li role="presentation" ><a href="#home"
-				role="tab" data-toggle="tab">教育背景</a></li>
 		</ul>
 
 		<!-- Tab panes -->
@@ -103,44 +76,49 @@ body {
 					<div class="col-sm-12">
 						<!-- <img src="img/yin.png" class="img-circle img-thumbnail" style="float:right;"> -->
 						<div style="text-align:left;">
+							<table style="margin: 10px; cellspacing:100px"  border="0" height="60" width="700" cellspacing="80">
+								<tr>
+									<td ><h4>【应用性能管理系统】</h4></td>
+									<td></td>
+									<td>道富杭州</td>
+									<td>2016.03 -- 至今</td>
+								</tr>
+							</table>
+
 							<p style="padding-left:20px;">
-								研究生期间参与过几个java web小项目的开发，实现的都是些基础的增删该查功能；跟着导师调研及使用了AWS的一些产品，调研大数据相关技术。
+								<b>项目介绍</b>
+								：应用性能监测系统，监控应用运行状况。实时抓取缓慢的SQL 语句、方法的执行时间及调用堆栈、异常信息，定时采集服务器基本信息，提供可视化展示、报表展示，并提供实时分析报警功能。
+使用Spring框架、ActiveMQ、Mysql数据库、redis、Quartz作业调度框架、Jboss Drools Fusion复杂事件处理引擎。
+								
 							</p>
-							<h4 style="padding-left:20px;font-weight:bold;">
-								【简单基金推荐】
-							</h4>
+							
+							<ol style="text-align:left;">
+								<li> 使用Spring AOP技术收集方法的执行时间及调用堆栈、异常信息和慢查询sql。</li>
+								<li> 使用ActiveMQ，利用队列（Queue）分发任务，实现负载均衡；使用主题（Topic）广播消息。</li>
+								<li> 引入复杂事件处理技术（Jboss Drools Fusion）实时分析监控规则，及时报警。</li>
+								<li> 使用redis内存数据库缓存热数据（一周的监控数据），提高用户请求响应速度。</li>
+								<li> 使用Mysql关系型数据库保存用户配置信息和监控数据。</li>
+								<li> 使用定时调度框架quartz来配置定时任务，配置定时报表、定时数据采集任务。</li>
+							</ol>
 							<p style="padding-left:20px;">
-								数据库记录基金近一个月的年利率，基金用向量表示（fund1<平均收益，收益方差，负平均收益>），推荐基金前，用户需做一份问卷调查，根据问卷调查结果，
-								确定一个用户向量（user1<10,风险承受能力，购买基金时常>）。基金向量与用户向量分量相乘后相加得到的结果为推荐指数，推荐指数越大，越推荐
+							
 							</p>
-							<h4 style="padding-left:20px;font-weight:bold;">
-								【开会时间建议】
-							</h4>
-							<p style="padding-left:20px;">
-								组长创建一个小组（姓名、组名、开会时间段、备注），系统自动生成一个邀请码。组员根据这个邀请码和自己的姓名就可进入系统，选择自己的空余时间，系统会根据
-								组员的选择，给出开会时间建议
-							</p>
+							
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+
 		
 		<!-- Nav tabs -->
 		<ul class="nav nav-tabs" role="tablist">
-			<li role="presentation" ><a href="#home"
-				role="tab" data-toggle="tab">技术技能</a></li>
-			<li role="presentation" ><a href="#home"
-				role="tab" data-toggle="tab">项目经验</a></li>
-			<li role="presentation" class="active"><a href="#home"
-				role="tab" data-toggle="tab">阅读书籍</a></li>
-			<li role="presentation"><a href="#home"
-				role="tab" data-toggle="tab">自我评价</a></li>
-			<li role="presentation" ><a href="#home"
-				role="tab" data-toggle="tab">教育背景</a></li>
-				
-		</ul>
 
+			<li role="presentation" class="active"><a href="#home"
+				role="tab" data-toggle="tab">技术技能</a></li>
+		</ul>
+		
+				
 		<!-- Tab panes -->
 		<div class="tab-content">
 			<div role="tabpanel" class="tab-pane active" id="home">
@@ -148,26 +126,25 @@ body {
 					<div class="col-sm-12">
 						<!-- <img src="img/yin.png" class="img-circle img-thumbnail" style="float:right;"> -->
 						<ul style="text-align:left;">
-							<li>Java编程思想、Spring实战、设计模式之禅、Head First Servlets and JSP、Java并发编程实战、深入理解Java虚拟机等</li>
+							<li>熟悉java语言，有java后端开发经验</li>
+							<li>熟悉Spring框架，熟悉IOC、AOP机制</li>
+							<li>熟悉常用的设计模式</li>
+							<li>熟悉MySQL数据库</li>
+							<li>熟息基本数据结构和常用算法</li>
+							<li>了解redis内存数据库，ActiveMQ消息中间件</li>
+							<li>了解java web开发SSM（Spring，SpringMVC，Mybatis）框架</li>
+							<li>英语：CET-6</li>
 						</ul>
 					</div>
 				</div>
 			</div>
 		</div>
-
 		
 		<!-- Nav tabs -->
 		<ul class="nav nav-tabs" role="tablist">
-			<li role="presentation" ><a href="#home"
-				role="tab" data-toggle="tab">技术技能</a></li>
-			<li role="presentation" ><a href="#home"
-				role="tab" data-toggle="tab">项目经验</a></li>
-			<li role="presentation" ><a href="#home"
-				role="tab" data-toggle="tab">阅读书籍</a></li>
+			
 			<li role="presentation" class="active"><a href="#home"
 				role="tab" data-toggle="tab">自我评价</a></li>
-			<li role="presentation" ><a href="#home"
-				role="tab" data-toggle="tab">教育背景</a></li>
 				
 		</ul>
 
@@ -178,46 +155,18 @@ body {
 					<div class="col-sm-12">
 						<!-- <img src="img/yin.png" class="img-circle img-thumbnail" style="float:right;"> -->
 						<ol style="text-align:left;">
-							<li>学习能力强，会主动去学习新的知识</li>
-							<li>性格积极乐观，传递正能量</li>
-							<li>兴趣爱好广，跑步，羽毛球等</li>
+							<li>热爱学习新技术，可根据项目需求快速学习使用新技术</li>
+							<li>性格积极乐观，传递正能量，注重团队协作精神，压力承受能力较强</li>
+							<li>有良好的沟通交流能力</li>
 						</ol>
 					</div>
 				</div>
 			</div>
 		</div>
-		
-				<!-- Nav tabs -->
-		<ul class="nav nav-tabs" role="tablist">
-			<li role="presentation" ><a href="#home"
-				role="tab" data-toggle="tab">技术技能</a></li>
-			<li role="presentation" ><a href="#home"
-				role="tab" data-toggle="tab">项目经验</a></li>
-			<li role="presentation" ><a href="#home"
-				role="tab" data-toggle="tab">阅读书籍</a></li>
-			<li role="presentation" ><a href="#home"
-				role="tab" data-toggle="tab">自我评价</a></li>
-			<li role="presentation" class="active"><a href="#home"
-				role="tab" data-toggle="tab">教育背景</a></li>
-		</ul>
 
-		<!-- Tab panes -->
-		<div class="tab-content">
-			<div role="tabpanel" class="tab-pane active" id="home">
-				<div class="row">
-					<div class="col-sm-12">
-						<!-- <img src="img/yin.png" class="img-circle img-thumbnail" style="float:right;"> -->
-						<ul style="text-align:left;">
-							<li style="list-style-type:none;">√ &nbsp;&nbsp;2014/09--2017/03 &nbsp;&nbsp; 浙江大学 &nbsp;&nbsp; 软件工程专业  &nbsp;&nbsp;硕士</li>
-							<li style="list-style-type:none;">√ &nbsp;&nbsp;2009/09--2013/07 &nbsp;&nbsp; 湖北大学 &nbsp;&nbsp; 软件工程专业  &nbsp;&nbsp;本科</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
+
 
 	</div>
-
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>

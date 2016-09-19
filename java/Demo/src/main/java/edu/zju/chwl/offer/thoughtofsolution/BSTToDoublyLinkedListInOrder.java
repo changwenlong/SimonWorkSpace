@@ -25,19 +25,20 @@ public class BSTToDoublyLinkedListInOrder {
         Stack<TreeNode> s = new Stack<TreeNode>();
         DoublyListNode dummy = new DoublyListNode(0);
         DoublyListNode head = dummy;
-        while(!s.isEmpty()||root!=null){
-        	while(root!=null){
-        		s.add(root);
-        		root=root.left;
+        TreeNode p = root;
+        while(!s.isEmpty()||p!=null){
+        	while(p!=null){
+        		s.push(p);
+        		p=p.left;
         	}
-        	if(!s.isEmpty()){
-        		TreeNode node = s.pop();
-        		DoublyListNode dNode = new DoublyListNode(node.val);
-        		dNode.prev=head;
-        		head.next=dNode;
-        		head = head.next;
-        		root = node.right;
-        	}
+    		p = s.pop();
+    		
+    		DoublyListNode dNode = new DoublyListNode(p.val);
+    		dNode.prev=head;
+    		head.next=dNode;
+    		head = head.next;
+    				
+    		p = p.right;
         }
         dummy.next.prev=null;
         return dummy.next;

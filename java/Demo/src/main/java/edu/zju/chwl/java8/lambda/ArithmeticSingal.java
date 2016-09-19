@@ -5,7 +5,7 @@ public class ArithmeticSingal {
 	/**
 	 * @param args
 	 */
-/*	public static void main(String[] args) {
+	public static void main(String[] args) {
 		doOperate(10,5,(a,b)->a+b);
 
 	}
@@ -16,5 +16,5 @@ public class ArithmeticSingal {
 	
 	public static int doOperate(int a,int b,Operator operator){
 		return operator.operate(a, b);
-	}*/
+	}
 }

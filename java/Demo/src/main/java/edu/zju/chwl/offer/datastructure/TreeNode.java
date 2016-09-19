@@ -41,23 +41,22 @@ public class TreeNode {
 		if (root == null) {
 			return list;
 		}
-		Stack<TreeNode> stack = new Stack<TreeNode>();		
+		Stack<TreeNode> stack = new Stack<TreeNode>();	
+		TreeNode p = root;	
 		TreeNode lastVisited = null;
-		while (!stack.isEmpty()||root!=null) {
-			while (root != null) {
-				stack.add(root);
-				root = root.left;
+		while (!stack.isEmpty()||p!=null) {
+			while (p != null) {
+				stack.push(p);
+				p = p.left;
 			}
-		 	if(!stack.isEmpty()){
-		 		TreeNode node = stack.peek();
-				TreeNode right = node.right;
-        		if (right == null || right == lastVisited) {
-    				list.add(stack.pop().val);
-    				lastVisited = node;
-    			}else{
-    				root = node.right;    				
-    			}
-        	}
+	 		TreeNode node = stack.peek();
+			TreeNode right = node.right;
+    		if (right == null || right == lastVisited) {
+				list.add(stack.pop().val);//访问元素
+				lastVisited = node;
+			}else{
+				p = node.right;    				
+			}
 		}
 		return list;
 	}
@@ -69,16 +68,15 @@ public class TreeNode {
 			return list;
 		}
 		Stack<TreeNode> stack = new Stack<TreeNode>();
-		while (!stack.isEmpty()||root!=null) {
-			while (root != null) {
-				list.add(root.val);
-				stack.add(root);
-				root = root.left;
+		TreeNode p = root;
+		while (!stack.isEmpty()||p!=null) {
+			while (p != null) {
+				list.add(p.val);//访问元素
+				stack.push(p);
+				p = p.left;
 			}
-		 	if(!stack.isEmpty()){
-		 		TreeNode node = stack.pop();
-    			root = node.right;    	
-        	}
+		 	p = stack.pop();
+    		p = p.right;  
 		}
 		return list;
 	}
@@ -90,16 +88,15 @@ public class TreeNode {
 			return list;
 		}
 		Stack<TreeNode> stack = new Stack<TreeNode>();
-		while (!stack.isEmpty()||root!=null) {
-			while (root != null) {
-				stack.add(root);
-				root = root.left;
+		TreeNode p = root;
+		while (!stack.isEmpty()||p!=null) {
+			while (p != null) {
+				stack.push(p);
+				p = p.left;
 			}
-		 	if(!stack.isEmpty()){
-		 		TreeNode node = stack.pop();
-				list.add(node.val);
-    			root = node.right;    	
-        	}
+		 	p = stack.pop();
+			list.add(p.val);//访问元素
+    		p = p.right;    	       	
 		}
 		return list;
 	}
