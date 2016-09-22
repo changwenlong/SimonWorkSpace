@@ -1,0 +1,91 @@
+[1] 顾明.软件工程中几种常用软件生命周期模型的简介[J].计算机
+时代,2003(1).
+
+[2] 陈丽,关少珊.应用性能管理概述[J].科技信息(学术研究),2008年02期
+
+[3] 宋义华,班孝明.应用性能管理分析与研究[J].软件服务,2014.6(10)-60-62
+
+[4] Luckham,David "The Power of Events:An Introduction to Complex Event Processing in
+Distributed Enterprise Systems", Addison Wesley Publishers, 2002. 
+
+[5] Etzion O,Niblett P.Event processing in action[M].Manning Publications Co.,2010．
+
+[6] Arasu,A.,Babu,S.,Widom,J.:The CQL continuous query language:semantic foundations
+and query execution.The VLDB Journal--The International Joumal on Very Large
+Data Bases 15(2),121—142(2006)
+
+[7] http://esper.codehaus.org/
+
+[8] Demers,A.,et a1.:Cayuga:A general purpose event monitoring system.CIDR(2007)
+
+[9] D.J.Abadi,Y.Ahmad,M.Balazinska,U.C,etintemel,M.Cherniack,J.-H.Hwang,W.
+Lindner,A.Maskey,A.Rasin,E.Ryvkina,N.Tatbul,Y.Xing,and S.B.Zdonik.The design of
+the borealis stream processing engine.In Proc.CIDR,pages 277-289,2005.
+
+[10] 孙林超,陈群,康庄庄.分布式RFID复杂事件处理关键技术的研究[J].计算机工程与
+应用,2011,47(22):105.109.
+
+[11] Brenda M.Miehelson.Event—Driven Architecture Overview.Patricia Seybold Group.February
+2006
+
+[12] rulecore.com[EB/OL].http://www.rulecore.corn/
+
+[13] Bali M.Drools JBoss Rules 5.0:Developer's Guide[M].Packt Publishing,2009.
+
+[14] Esparza J,Nielsen M.Decidability issues for Petri nets[J].Petri nets newsletter,1994,94:5-23.
+
+
+
+[15] Nagy K A.Distributing Complex Event Detection[Z].2012.
+
+[16] Paton N W,D I Az O.Active database systems[J].ACM Computing Surveys (CSUR),1999,31(1):63-103.
+
+[17] Dittrich K R,Gatziu S,Geppert A.The active database management system manifesto:A rulebase of ADBMS features[M].Rules in Database Systems,Springer,1995,1-17.
+
+[18] Cugola G,Margara A.Processing flows of information:From data stream to complex event processing[J].ACM Computing Surveys,2012,44(3):15.
+
+[19] 王建,董广智,柳军飞.支持复杂事件处理的业务流程建模研究[J].计算
+机工程与设计,2012,33(6)．
+[20] 王俊.金融欺诈行为监测平台设计实现及其在反洗钱系统项目中的应用[D].北京邮电大学.2009.
+
+[21] 魏永超,陈立军.数据流上复杂事件处理系统Eagle的设计与实现[C]第二十五届中国数据库学术会议论文集(一).2008．
+
+
+[22] 叶舟,王东.基于规则引擎的数据清洗[J].计算机工程,2006,32(23):52-54.
+
+[51]张昕.基于复杂事件处理的金融软件系统实现及改进[D].浙江大学,2007.
+
+[52]郑明秀,付春常,杨明根.复杂事件描述语言事件表达式的研究[J].计算
+机技术与发展,2012,22(7):113-115.
+
+
+
+[23] O’Keeffe D,Bacon J.Reliable complex event detection for pervasive computing.
+Proceedings of the Fourth ACM International Conference on Distributed Event—Based
+Systems,Cambridge,United Kingdom,2010.New York,NY,USA:ACM,2010:73-84
+
+[24] Wasserkug S,Gal A,Etzion O,et a1.Efficient Processing of Uncertain Events in
+Rule—Based Systems.Knowledge and Data Engineering,IEEE Transactions on.2012,
+24(1):45—58
+
+[25] Romdhane R,Boulay B,Bremond F,et a1.Probabilistic Recognition of Complex Event.
+Proceedings of the 8th international conference on Computer vision systems,Anipolis,
+France,2011.Berlin,Heidelberg:Springer,2011:122-13l
+
+[26] Liu M,Li M,Golovnya D,et a1.Sequence Pattern Query Processing over Out—of—Order
+Event Streams.Proceedings of the 2009 IEEE International Conference on Data
+Engineering,Shanghai,China 2009.Washington,DC,USA:IEEE,2009:784—795
+
+[27] Antunes M,Turkman M A A,Turkman K F.A Bayesian Approach to Event Prediction.
+Journal of Time Series Analysis.2003,24(6):631-646
+
+[28] Rudin C,Letham B,Salleb-Aouissi A,et a1.Sequential Event Prediction with
+Association Rules.MIT web domain,2011
+
+[29] Tóth G,Fülöp L J,Vidács L,et a1.Complex event processing synergies with predictive
+analytics.Proceedings of the Fourth ACM Intemational Conference on Distributed
+Event-Based Systems.New York.Cambridge,United Kingdom,2010.NY,USA:ACM.2010:95—96
+
+[30] Marz N.Storm:Distributed and fault-tolerant realtime computation[Z].OSCON,2012.
+
+[31] Schultz-M O Ller N P,Migliavacca M, Pietzuch P.Distributed complex event processing with query rewriting[C].2009.
