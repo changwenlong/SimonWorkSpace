@@ -30,14 +30,14 @@ body {
 		<div class="row">
 			<div class="col-sm-12">
 				<img src="img/xiaohui.jpg" width="120px" style="float:left;">
-				<h3 style="float:right;padding:20px;">Java研发</h3>
+				<h3 style="float:right;padding:20px;">Golang开发</h3>
 				<h2 style="padding:40px 0px">常文龙</h2>
 			</div>
 		</div>
 		
 		<table class="table" style="margin-top: 10px;">
 			<tr><td>性别：男</td>
-				<td>出生年月：199109</td>
+				<td>出生年月：199110</td>
 			</tr>
 			<tr><td>手机：15271807520</td>
 				<td>邮箱： 786320366@qq.com  </td>
@@ -61,6 +61,34 @@ body {
 				<td>2009.09 - 2013.07</td>
 			</tr>
 		</table>
+
+		
+		<!-- Nav tabs -->
+		<ul class="nav nav-tabs" role="tablist">
+
+			<li role="presentation" class="active"><a href="#home"
+				role="tab" data-toggle="tab">技术技能</a></li>
+		</ul>
+		
+				
+		<!-- Tab panes -->
+		<div class="tab-content">
+			<div role="tabpanel" class="tab-pane active" id="home">
+				<div class="row">
+					<div class="col-sm-12">
+						<!-- <img src="img/yin.png" class="img-circle img-thumbnail" style="float:right;"> -->
+						<ul style="text-align:left;margin: 10px;">
+							<li>熟悉golang，3年golang后端开发经验 </li>
+							<li>熟悉MySQL数据库，熟悉sql调优 </li>
+							<li>熟悉数据结构和算法 </li>
+							<li>了解tcp、http等协议</li>
+							<li>了解网络编程</li>
+							<li>熟练使用docker、k8s</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
 		
 		<!-- Nav tabs -->
 		<ul class="nav nav-tabs" role="tablist">
@@ -78,63 +106,79 @@ body {
 						<div style="text-align:left;">
 							<table style="margin: 10px; cellspacing:100px"  border="0" height="60" width="700" cellspacing="80">
 								<tr>
-									<td ><h4>【应用性能管理系统】</h4></td>
+									<td ><h4>【containerops】</h4></td>
 									<td></td>
-									<td>道富杭州</td>
-									<td>2016.03 -- 至今</td>
+									<td>华为杭州-golang开发</td>
+									<td>2018.03 -- 2019.7</td>
 								</tr>
 							</table>
 
 							<p style="padding-left:20px;">
 								<b>项目介绍</b>
-								：应用性能监测系统，监控应用运行状况。实时抓取缓慢的SQL 语句、方法的执行时间及调用堆栈、异常信息，定时采集服务器基本信息，提供可视化展示、报表展示，并提供实时分析报警功能。
-使用Spring框架、ActiveMQ、Mysql数据库、redis、Quartz作业调度框架、Jboss Drools Fusion复杂事件处理引擎。
+								：containerops是华为云cicd解决方案，支持一站式代码编译、镜像构建、存储、部署，降低了应用容器化改造和交付的难度。
 								
 							</p>
 							
-							<ol style="text-align:left;">
-								<li> 使用Spring AOP技术收集方法的执行时间及调用堆栈、异常信息和慢查询sql。</li>
-								<li> 使用ActiveMQ，利用队列（Queue）分发任务，实现负载均衡；使用主题（Topic）广播消息。</li>
-								<li> 引入复杂事件处理技术（Jboss Drools Fusion）实时分析监控规则，及时报警。</li>
-								<li> 使用redis内存数据库缓存热数据（一周的监控数据），提高用户请求响应速度。</li>
-								<li> 使用Mysql关系型数据库保存用户配置信息和监控数据。</li>
-								<li> 使用定时调度框架quartz来配置定时任务，配置定时报表、定时数据采集任务。</li>
-							</ol>
 							<p style="padding-left:20px;">
-							
+								<b>我的工作：</b>
 							</p>
 							
+							<ol style="text-align:left;">
+								<li> 负责编译、镜像构建、部署模块的开发</li>
+								<li> 使用池化技术，增加编译构建中间产物缓存，提升编译构建速度</li>
+								<li> 将编译构建环境容器化，用户可基于docker容器轻松定义自定义编译构建环境</li>
+								<li> 部署对接华为云容器引擎（CCE），支持单组件部署，集成helm部署支持多组件部署</li>
+								<li> 应用部署支持多种部署模式如滚动发布、基于灰度的金丝雀发布、蓝绿发布</li>
+							</ol>
+							
+							<hr /> 
+							<table style="margin: 10px; cellspacing:100px"  border="0" height="60" width="700" cellspacing="80">
+								<tr>
+									<td ><h4>【swr】</h4></td>
+									<td></td>
+									<td>华为杭州-golang开发</td>
+									<td>2019.08 -- 至今</td>
+								</tr>
+							</table>
+							
+							<p style="padding-left:20px;">
+								<b>我的工作：</b>
+							</p>
+							
+							<ol style="text-align:left;">
+								<li> 将线上的swr与containerops功能交付到华为云的线下版本，负责线下版本管理</li>
+								<li> 适配线下版本，做功能维护</li>
+								<li> 华为云swr安全整改</li>
+								
+							</ol><hr /> 
+							<table style="margin: 10px; cellspacing:100px"  border="0" height="60" width="700" cellspacing="80">
+								<tr>
+									<td ><h4>【swr】</h4></td>
+									<td></td>
+									<td>华为杭州-golang开发</td>
+									<td>2017.04 -- 2018.02</td>
+								</tr>
+							</table>
+
+							<p style="padding-left:20px;">
+								<b>项目介绍</b>
+								：华为云容器镜像服务（SoftWare Repository for Container）是一种支持容器镜像全生命周期管理的服务，提供简单易用、安全可靠的镜像管理功能，帮助用户快速部署容器化服务。
+								
+							</p>
+							
+							<p style="padding-left:20px;">
+								<b>我的工作：</b>
+							</p>
+							
+							<ol style="text-align:left;">
+								<li> 负责计费模块的开发，基于流量和存储收费</li>
+								<li> 开发租户间共享镜像的功能</li>
+								<li> 负责开发镜像触发器功能，镜像更新时，自动升级应用</li>
+							</ol>
+							
+						
+							
 						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		
-		<!-- Nav tabs -->
-		<ul class="nav nav-tabs" role="tablist">
-
-			<li role="presentation" class="active"><a href="#home"
-				role="tab" data-toggle="tab">技术技能</a></li>
-		</ul>
-		
-				
-		<!-- Tab panes -->
-		<div class="tab-content">
-			<div role="tabpanel" class="tab-pane active" id="home">
-				<div class="row">
-					<div class="col-sm-12">
-						<!-- <img src="img/yin.png" class="img-circle img-thumbnail" style="float:right;"> -->
-						<ul style="text-align:left;">
-							<li>熟悉java语言，有java后端开发经验</li>
-							<li>熟悉Spring框架，熟悉IOC、AOP机制</li>
-							<li>熟悉常用的设计模式</li>
-							<li>熟悉MySQL数据库</li>
-							<li>熟息基本数据结构和常用算法</li>
-							<li>了解redis内存数据库，ActiveMQ消息中间件</li>
-							<li>了解java web开发SSM（Spring，SpringMVC，Mybatis）框架</li>
-							<li>英语：CET-6</li>
-						</ul>
 					</div>
 				</div>
 			</div>
@@ -157,7 +201,7 @@ body {
 						<ol style="text-align:left;">
 							<li>热爱学习新技术，可根据项目需求快速学习使用新技术</li>
 							<li>性格积极乐观，传递正能量，注重团队协作精神，压力承受能力较强</li>
-							<li>有良好的沟通交流能力</li>
+							<li>具有较强的业务分析能力，能够快速理解和分析复杂的业务逻辑</li>
 						</ol>
 					</div>
 				</div>
